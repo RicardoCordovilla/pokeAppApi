@@ -1,0 +1,336 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #Eef;
+  width: 100vw;
+  height: 100vh;
+  /* padding: 0 1em; */
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: #888; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.imgHome{
+  width: 50%;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  z-index: -2;
+}
+
+.home {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  text-align: center;
+  align-content: center;
+}
+
+
+.homeTitle {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  text-align: center;
+  color: #FE1936;
+}
+
+
+.searchBx{
+  margin: 1em;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;  
+}
+
+.searchInput{
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+}
+
+.btnSearch:hover{
+  border: none;
+  box-shadow: 0 0 10px 2px #1af;
+  transition: box-shadow 200ms ease ;
+}
+
+.btnSearch{
+  margin: 0 1em;
+  background-color: #46991a;
+  color: #Eef;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 5px 2px #555;
+  transition: box-shadow 500ms ease ;
+}
+
+.searchType{
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2em;
+  background-color: #Eef;
+
+}
+
+.cardsContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  column-gap: 1.8em;
+  row-gap: 1em;
+}
+
+.pokemonBx {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: aqua;
+  width: 250px;
+  border-radius: 16px;
+  text-align: left;
+  padding: 1em 1.5em;
+  margin: 0.5em;
+  border: 2px solid #aaa;
+  box-shadow: 0 0 3px 1px #1af;
+  cursor: pointer;
+  transition: box-shadow 600ms ease;
+}
+
+.pokemonBx:hover {
+  box-shadow: 0 0 8px 2px #155;
+  transition: box-shadow 250ms ease;
+}
+
+.pokemonBx img {
+  transition: transform 800ms, filter 300ms;
+  transition-timing-function: ease;
+}
+
+.pokemonBx:hover img {
+  transform: scale(1.4) translateX(-30%);
+  filter: drop-shadow(0 0 15px yellow);
+  transition: transform 400ms, filter 300ms;
+  transition-timing-function: ease;
+}
+
+
+.pokemonName {
+  color: #Eef;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.imgBx {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 100%;
+  width: 100%;
+}
+
+.imgBx img {
+  position: relative;
+  height: 100%;
+  object-fit: contain;
+  left: 50%;
+}
+
+
+.pokemonBx__info {
+  padding-left: 1em;
+}
+
+.pokemonBx__info li {
+  list-style: none;
+  border: 3px solid #333;
+  border-radius: 5px;
+  padding: 5px 8px;
+  text-align: center;
+  color: #Eef;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0.8em;
+
+}
+
+
+
+.paginationBx {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em 2em;
+  margin-bottom: 2em;
+}
+
+.btnPageBx {
+  width: fit-content;
+  margin-bottom: 1em;
+
+}
+
+.btnPage {
+  border: 1px solid #084851;
+  padding: 0.5em 0.8em;
+  background-color: #061826;
+  color: #FBFBFB;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1 0;
+  margin-top: 1em;
+  transition: all 700ms ease;
+}
+
+.btnPage:active {
+  background-color: #46ff1a;
+  transition: background-color 700ms ease;
+}
+
+.btnPage:hover {
+  box-shadow: 0 0 10px 3px #111;
+  transition: box-shadow 300ms ease;
+
+}
+
+.hiden {
+  display: none;
+}
+
+
+input[type="radio"]:checked+.lbl-radio {
+  border: 1px solid #aaa;
+  background-color: #46991a;
+  color: #000;
+  box-shadow: 0 0 10px 3px transparent;
+  transition: background-color 300ms ease;
+  cursor: default;
+}
+
+
+.cardStats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1em;
+  border: 3px solid #061826;
+  border-radius: 16px;
+  box-shadow: 0 0 3px 1px #333;
+  background-color: #dfd;
+}
+
+.statsHexagon{
+  margin: 0;
+  background: linear-gradient(to right, #dfd,#daf);
+  border-radius: 18px;
+}
+
+.cardGeneralinfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.abilitiesBx {
+  background-color: #1af;
+  padding: 1em 1.5em;
+  padding-top: 0;
+  margin: 1em 1em;
+  border-radius: 16px;
+}
+
+.abilities {
+  text-align: left;
+  list-style: none;
+  line-height: 1.5rem;
+  color: #Eef;
+  text-transform: uppercase;
+  border: 1px dashed #111;
+  margin: 0.5em 0.5em;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.bodyInfo {
+  background-color: #a55;
+  padding: 1em 1.5em;
+  padding-top: 0;
+  margin: 1em 1em;
+  border-radius: 16px;
+}
+
+.btnBack {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  background-color: #46991a;
+  color: #Eef;
+  font-weight: 600;
+  font-size: 1.7rem;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 5px 2px #555;
+  transition: box-shadow 500ms ease ;
+}
+
+.btnBack:hover {
+  box-shadow: 0 0 15px 3px #061826;
+  transition: box-shadow 250ms ease ;
+
+}
+
+.textStat{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
